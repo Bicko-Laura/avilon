@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact
+{% endblock %}
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-5"><img src="https://cdn.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png" alt="" width="100%"></div>
+    <div class="col-md-6"><form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+  <h3>Contact Us</h3>
+  {{ form.as_p }}
+    <button type="submit" class="btn btn-primary" style="width:60%; margin-left:20%; margin-right: 20%">Submit</button>
+</form></div>
+    <div class="col-md-1"></div>
+</div>
+
+
+</body>
+</html>
+
+{% endblock %}
